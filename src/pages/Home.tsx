@@ -101,13 +101,37 @@ const Home = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { name: 'HIIT Training', description: 'High-intensity interval training for maximum results', time: '45 min' },
-              { name: 'Yoga Flow', description: 'Improve flexibility and find inner peace', time: '60 min' },
-              { name: 'Strength Training', description: 'Build muscle and increase power', time: '50 min' },
+              { 
+                name: 'Personal Training', 
+                description: 'One-on-one coaching tailored to your specific goals with both in-person and online options available', 
+                time: 'Flexible',
+                image: '/images/services/personal-training.jpg'
+              },
+              { 
+                name: 'Yoga & Mindfulness', 
+                description: 'Relaxation, flexibility, and stress relief through guided yoga and mindfulness practices', 
+                time: '60-75 min',
+                image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=200&q=80'
+              },
+              { 
+                name: 'Nutrition Guidance', 
+                description: 'Personalized diet and meal planning to fuel your body and support your fitness journey', 
+                time: 'Ongoing',
+                image: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=200&q=80'
+              },
             ].map((classItem, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
-                <div className="bg-gray-300 h-48 flex items-center justify-center">
-                  <span className="text-gray-600">Class Image</span>
+              <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <div className="relative h-48 overflow-hidden">
+                  <img 
+                    src={classItem.image} 
+                    alt={classItem.name}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    onError={(e) => {
+                      // Fallback if image doesn't exist
+                      e.currentTarget.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzZiNzI4MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPicgKyBjbGFzc0l0ZW0ubmFtZSArICc8L3RleHQ+PC9zdmc+';
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-20 hover:bg-opacity-10 transition-all duration-300"></div>
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-2">{classItem.name}</h3>

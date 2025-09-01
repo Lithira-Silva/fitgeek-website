@@ -13,6 +13,7 @@ const Services = () => {
       duration: 'Flexible',
       level: 'All Levels',
       category: 'Individual Coaching',
+      image: '/images/services/personal-training.jpg',
       features: ['Personalized workout plans', 'Goal-specific training', 'In-person & online options', 'Progress tracking']
     },
     {
@@ -21,6 +22,7 @@ const Services = () => {
       duration: '45-60 min',
       level: 'All Levels',
       category: 'Group Sessions',
+      image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=200&q=80',
       features: ['Community building', 'Energetic atmosphere', 'Variety of formats', 'Motivational support']
     },
     {
@@ -29,6 +31,7 @@ const Services = () => {
       duration: '60-75 min',
       level: 'Beginner to Advanced',
       category: 'Mind & Body',
+      image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=200&q=80',
       features: ['Stress relief', 'Flexibility improvement', 'Mindfulness training', 'Relaxation techniques']
     },
     {
@@ -37,6 +40,7 @@ const Services = () => {
       duration: 'Ongoing',
       level: 'All Levels',
       category: 'Nutrition Support',
+      image: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=200&q=80',
       features: ['Meal planning', 'Dietary consultations', 'Nutritional education', 'Custom diet plans']
     },
     {
@@ -45,6 +49,7 @@ const Services = () => {
       duration: 'Program-based',
       level: 'All Levels',
       category: 'Specialized Programs',
+      image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=200&q=80',
       features: ['Sustainable results', 'Medical monitoring', 'Behavior modification', 'Long-term support']
     },
     {
@@ -53,6 +58,7 @@ const Services = () => {
       duration: 'Flexible',
       level: 'All Levels',
       category: 'Lifestyle Coaching',
+      image: 'https://images.unsplash.com/photo-1594882645126-14020914d58d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=200&q=80',
       features: ['Habit formation', 'Lifestyle optimization', 'Goal setting', 'Accountability support']
     }
   ]
@@ -78,8 +84,17 @@ const Services = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300">
-                <div className="bg-gray-300 h-48 flex items-center justify-center">
-                  <span className="text-gray-600 text-lg">{service.name} Image</span>
+                <div className="relative h-48 overflow-hidden">
+                  <img 
+                    src={service.image} 
+                    alt={service.name}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    onError={(e) => {
+                      // Fallback if image doesn't exist
+                      e.currentTarget.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzZiNzI4MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPicgKyBzZXJ2aWNlLm5hbWUgKyAnPC90ZXh0Pjwvc3ZnPic=';
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-20 hover:bg-opacity-10 transition-all duration-300"></div>
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-3">{service.name}</h3>
