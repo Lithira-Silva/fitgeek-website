@@ -21,8 +21,8 @@ const Home = () => {
                 <Link to="/membership" className="btn-accent text-lg px-8 py-4">
                   Start Your Journey
                 </Link>
-                <Link to="/classes" className="btn-secondary text-lg px-8 py-4">
-                  View Classes
+                <Link to="/services" className="btn-secondary text-lg px-8 py-4">
+                  View Services
                 </Link>
               </div>
             </div>
@@ -114,7 +114,7 @@ const Home = () => {
                   <p className="text-gray-600 mb-4">{classItem.description}</p>
                   <div className="flex justify-between items-center">
                     <span className="text-primary-600 font-medium">{classItem.time}</span>
-                    <Link to="/classes" className="text-primary-600 hover:text-primary-700 font-medium">
+                    <Link to="/services" className="text-primary-600 hover:text-primary-700 font-medium">
                       Learn More →
                     </Link>
                   </div>
@@ -124,8 +124,8 @@ const Home = () => {
           </div>
           
           <div className="text-center mt-12">
-            <Link to="/classes" className="btn-primary">
-              View All Classes
+            <Link to="/services" className="btn-primary">
+              View All Services
             </Link>
           </div>
         </div>

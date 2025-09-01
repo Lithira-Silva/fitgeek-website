@@ -7,8 +7,7 @@ const Header = () => {
   const navigation = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
-    { name: 'Classes', href: '/classes' },
-    { name: 'Trainers', href: '/trainers' },
+    { name: 'Services', href: '/services' },
     { name: 'Membership', href: '/membership' },
     { name: 'Contact', href: '/contact' },
   ]
