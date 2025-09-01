@@ -5,6 +5,7 @@
 @layer base {
   body {
     @apply font-sans text-gray-900 bg-gray-50;
+    padding-top: 80px; /* Account for fixed header */
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -41,6 +42,11 @@
   
   .animate-float.delay-1000 {
     animation-delay: 1s;
+  }
+  
+  /* Smooth scroll for better UX */
+  html {
+    scroll-behavior: smooth;
   }
 }
 

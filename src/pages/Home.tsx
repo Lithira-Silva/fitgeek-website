@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative min-h-screen bg-gradient-to-br from-gray-900 via-primary-900 to-primary-800 text-white overflow-hidden">
+      <section className="relative min-h-screen bg-gradient-to-br from-gray-900 via-primary-900 to-primary-800 text-white overflow-hidden -mt-20 pt-20">
         {/* Background Image */}
         <div className="absolute inset-0">
           <img 
