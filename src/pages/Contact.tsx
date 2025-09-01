@@ -108,7 +108,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-1">Visit Us</h3>
-                    <p className="text-gray-600">123 Fitness Street<br />Wellness City, ST 12345</p>
+                    <p className="text-gray-600">FitGeek<br />Thalawathugoda road<br />Kotte</p>
                   </div>
                 </div>
                 
@@ -120,7 +120,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-1">Call Us</h3>
-                    <p className="text-gray-600">(555) 123-4567</p>
+                    <p className="text-gray-600">94 75 734 2418</p>
                     <p className="text-sm text-gray-500">Mon-Fri: 5AM-11PM<br />Sat-Sun: 6AM-10PM</p>
                   </div>
                 </div>
@@ -133,7 +133,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-1">Email Us</h3>
-                    <p className="text-gray-600">info@fitgeek.com</p>
+                    <p className="text-gray-600">nethsukasakindu@gmail.com</p>
                     <p className="text-sm text-gray-500">We'll respond within 24 hours</p>
                   </div>
                 </div>

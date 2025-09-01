@@ -21,7 +21,7 @@ const Membership = () => {
             {/* Essential Plan */}
             <div className="bg-white rounded-lg shadow-md p-8 text-center">
               <h3 className="text-2xl font-semibold mb-4">Essential Wellness</h3>
-              <div className="text-5xl font-bold text-primary-600 mb-2">₹15,000</div>
+              <div className="text-5xl font-bold text-primary-600 mb-2">LKR 15,000</div>
               <p className="text-gray-600 mb-6">per month</p>
               <ul className="space-y-3 text-left mb-8">
                 <li className="flex items-center">
