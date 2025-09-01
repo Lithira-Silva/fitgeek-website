@@ -44,13 +44,6 @@ const Header = () => {
             </div>
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
-            <Link to="/membership" className="btn-primary">
-              Join Now
-            </Link>
-          </div>
-
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
@@ -85,13 +78,6 @@ const Header = () => {
                   {item.name}
                 </Link>
               ))}
-              <Link
-                to="/membership"
-                className="btn-primary w-full mt-4"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Join Now
-              </Link>
             </div>
           </div>
         )}
