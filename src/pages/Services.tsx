@@ -1,4 +1,11 @@
+import { useState } from 'react'
+
 const Services = () => {
+  const [expandedService, setExpandedService] = useState<number | null>(null)
+
+  const toggleService = (index: number) => {
+    setExpandedService(expandedService === index ? null : index)
+  }
   const services = [
     {
       name: 'Personal Training',
@@ -70,7 +77,7 @@ const Services = () => {
         <div className="container-max">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300">
                 <div className="bg-gray-300 h-48 flex items-center justify-center">
                   <span className="text-gray-600 text-lg">{service.name} Image</span>
                 </div>
@@ -78,34 +85,64 @@ const Services = () => {
                   <h3 className="text-xl font-semibold mb-3">{service.name}</h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
                   
-                  <div className="space-y-2 mb-4">
-                    <div className="flex justify-between">
-                      <span className="text-gray-500">Duration:</span>
-                      <span className="font-medium">{service.duration}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-500">Level:</span>
-                      <span className="font-medium">{service.level}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-500">Category:</span>
-                      <span className="font-medium">{service.category}</span>
-                    </div>
-                  </div>
-                  
-                  <div className="border-t pt-4">
-                    <h4 className="font-medium mb-2">Features:</h4>
-                    <div className="space-y-1">
-                      {service.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="text-sm text-gray-600 bg-gray-100 px-3 py-1 rounded">
-                          {feature}
+                  {expandedService !== index && (
+                    <>
+                      <div className="space-y-2 mb-4">
+                        <div className="flex justify-between">
+                          <span className="text-gray-500">Duration:</span>
+                          <span className="font-medium">{service.duration}</span>
                         </div>
-                      ))}
-                    </div>
-                  </div>
+                        <div className="flex justify-between">
+                          <span className="text-gray-500">Level:</span>
+                          <span className="font-medium">{service.level}</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-gray-500">Category:</span>
+                          <span className="font-medium">{service.category}</span>
+                        </div>
+                      </div>
+                      
+                      <div className="text-center mb-4">
+                        <p className="text-sm text-gray-500 italic">Click "Learn More" to see features</p>
+                      </div>
+                    </>
+                  )}
                   
-                  <button className="w-full mt-4 btn-primary">
-                    Learn More
+                  {expandedService === index && (
+                    <div className="border-t pt-4 mb-4">
+                      <div className="flex items-center justify-between mb-4">
+                        <h4 className="text-lg font-semibold text-primary-600">Features</h4>
+                        <div className="flex items-center text-primary-600">
+                          <svg className="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
+                          <span className="text-sm font-medium">What's Included</span>
+                        </div>
+                      </div>
+                      <div className="grid grid-cols-1 gap-3">
+                        {service.features.map((feature, featureIndex) => (
+                          <div key={featureIndex} className="flex items-center p-3 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg border border-blue-100 hover:from-blue-100 hover:to-indigo-100 transition-colors duration-200">
+                            <div className="flex-shrink-0 w-2 h-2 bg-primary-600 rounded-full mr-3"></div>
+                            <span className="text-gray-800 font-medium">{feature}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                  
+                  <button 
+                    onClick={() => toggleService(index)}
+                    className="w-full mt-4 btn-primary flex items-center justify-center space-x-2 transition-all duration-200"
+                  >
+                    <span>{expandedService === index ? 'Show Less' : 'Learn More'}</span>
+                    <svg 
+                      className={`w-4 h-4 transform transition-transform duration-200 ${expandedService === index ? 'rotate-180' : ''}`} 
+                      fill="none" 
+                      stroke="currentColor" 
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
                   </button>
                 </div>
               </div>
