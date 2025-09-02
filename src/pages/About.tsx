@@ -33,19 +33,49 @@ const About = () => {
                 Our approach combines scientific training methods with personalized attention 
                 to ensure every member gets the results they deserve.
               </p>
-              <div className="grid grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 gap-6">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-primary-600 mb-2">750+</div>
                   <div className="text-gray-600">Happy Members</div>
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-primary-600 mb-2">50+</div>
-                  <div className="text-gray-600">Expert Trainers</div>
-                </div>
               </div>
             </div>
-            <div className="bg-gray-300 h-96 rounded-lg flex items-center justify-center">
-              <span className="text-gray-600 text-lg">About Us Image</span>
+            <div className="relative">
+              <div className="rounded-2xl overflow-hidden shadow-2xl">
+                <img 
+                  src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600&q=80"
+                  alt="FitGeek Team - Professional fitness environment"
+                  className="w-full h-96 object-cover"
+                  onError={(e) => {
+                    // Fallback if image doesn't load
+                    e.currentTarget.src = 'https://images.unsplash.com/photo-1606889464198-fcb18894cf50?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600&q=80';
+                  }}
+                />
+                
+                {/* Overlay with stats */}
+                <div className="absolute bottom-6 left-6 right-6">
+                  <div className="bg-white/95 backdrop-blur-sm rounded-xl p-6 shadow-lg">
+                    <div className="grid grid-cols-3 gap-4 text-center">
+                      <div>
+                        <div className="text-2xl font-bold text-primary-600">5+</div>
+                        <div className="text-sm text-gray-600">Years Experience</div>
+                      </div>
+                      <div>
+                        <div className="text-2xl font-bold text-primary-600">24/7</div>
+                        <div className="text-sm text-gray-600">Support</div>
+                      </div>
+                      <div>
+                        <div className="text-2xl font-bold text-primary-600">6+</div>
+                        <div className="text-sm text-gray-600">Services</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Decorative elements */}
+              <div className="absolute -top-4 -right-4 w-24 h-24 bg-accent-500/20 rounded-full blur-xl"></div>
+              <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-primary-500/20 rounded-full blur-xl"></div>
             </div>
           </div>
         </div>
