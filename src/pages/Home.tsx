@@ -274,9 +274,6 @@ const Home = () => {
           <p className="text-xl mb-8 text-primary-100">
             Join thousands of members who have transformed their lives at FitGeek.
           </p>
-          <Link to="/membership" className="btn-accent text-lg px-8 py-4">
-            Join Now - Special Offer
-          </Link>
         </div>
       </section>
     </div>
