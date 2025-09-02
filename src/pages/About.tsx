@@ -35,7 +35,7 @@ const About = () => {
               </p>
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-primary-600 mb-2">5000+</div>
+                  <div className="text-3xl font-bold text-primary-600 mb-2">750+</div>
                   <div className="text-gray-600">Happy Members</div>
                 </div>
                 <div className="text-center">
@@ -127,21 +127,23 @@ const About = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { name: 'Sarah Johnson', role: 'Founder & CEO', experience: '15 years fitness industry' },
-              { name: 'Mike Chen', role: 'Head Trainer', experience: 'Certified fitness expert' },
-              { name: 'Emily Davis', role: 'Wellness Director', experience: 'Nutrition specialist' },
-            ].map((member, index) => (
-              <div key={index} className="text-center">
-                <div className="bg-gray-300 w-48 h-48 rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <span className="text-gray-600">Photo</span>
-                </div>
-                <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
-                <p className="text-primary-600 font-medium mb-2">{member.role}</p>
-                <p className="text-gray-600">{member.experience}</p>
+          <div className="flex justify-center">
+            <div className="text-center">
+              <div className="w-48 h-48 rounded-full mx-auto mb-6 overflow-hidden">
+                <img 
+                  src="/images/services/team_member.jpg" 
+                  alt="Team Member"
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    // Fallback if image doesn't exist
+                    e.currentTarget.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzZiNzI4MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkZvdW5kZXI8L3RleHQ+PC9zdmc+';
+                  }}
+                />
               </div>
-            ))}
+              <h3 className="text-xl font-semibold mb-2">Founder & CEO</h3>
+              <p className="text-primary-600 font-medium mb-2">15 years fitness industry</p>
+              <p className="text-gray-600">Youtuber, motivational speaker, muay thai</p>
+            </div>
           </div>
         </div>
       </section>
