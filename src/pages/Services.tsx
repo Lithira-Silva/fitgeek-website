@@ -320,32 +320,6 @@ const Services = () => {
               Start your transformation journey today!
             </p>
             
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <a
-                href="/packages"
-                className="group relative inline-flex items-center px-10 py-5 bg-gradient-to-r from-accent-500 to-accent-600 hover:from-accent-600 hover:to-accent-700 text-white font-bold rounded-2xl shadow-2xl hover:shadow-accent-500/25 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
-              >
-                <span className="relative z-10">View Packages</span>
-                <svg className="w-6 h-6 ml-3 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-                
-                {/* Button Glow Effect */}
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-accent-400 to-accent-500 opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300"></div>
-              </a>
-              
-              <a
-                href="/contact"
-                className="group inline-flex items-center px-10 py-5 bg-white/10 backdrop-blur-sm border-2 border-white/30 hover:border-white/50 text-white font-semibold rounded-2xl hover:bg-white/20 transition-all duration-300 transform hover:scale-105"
-              >
-                <span>Contact Us</span>
-                <svg className="w-5 h-5 ml-3 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                </svg>
-              </a>
-            </div>
-            
             {/* Enhanced Trust Indicators */}
             <div className="mt-16 pt-12 border-t border-white/20">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
