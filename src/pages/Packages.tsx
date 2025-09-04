@@ -103,7 +103,7 @@ const Packages = () => {
                   ))}
                 </ul>
 
-                <a href="tel:+94757342418" className="w-full bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white py-4 px-6 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl inline-flex items-center justify-center">
+                <a href="https://wa.me/94757342418?text=Hi!%20I'm%20interested%20in%20the%20Basic%20Package%20(LKR%2012,000/month).%20Can%20you%20provide%20more%20details%20and%20help%20me%20get%20started?" className="w-full bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white py-4 px-6 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl inline-flex items-center justify-center">
                   Contact us to Purchase
                 </a>
               </div>
@@ -158,7 +158,7 @@ const Packages = () => {
                   ))}
                 </ul>
 
-                <a href="tel:+94757342418" className="w-full bg-gradient-to-r from-accent-600 to-accent-700 hover:from-accent-700 hover:to-accent-800 text-white py-4 px-6 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl inline-flex items-center justify-center">
+                <a href="https://wa.me/94757342418?text=Hi!%20I'm%20interested%20in%20the%20Premium%20Package%20(LKR%2025,000/month).%20Can%20you%20provide%20more%20details%20and%20help%20me%20get%20started?" className="w-full bg-gradient-to-r from-accent-600 to-accent-700 hover:from-accent-700 hover:to-accent-800 text-white py-4 px-6 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl inline-flex items-center justify-center">
                   Contact us to Purchase
                 </a>
               </div>
@@ -204,7 +204,7 @@ const Packages = () => {
                   ))}
                 </ul>
 
-                <a href="tel:+94757342418" className="w-full bg-gradient-to-r from-primary-600 to-accent-600 hover:from-primary-700 hover:to-accent-700 text-white py-4 px-6 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl inline-flex items-center justify-center">
+                <a href="https://wa.me/94757342418?text=Hi!%20I'm%20interested%20in%20the%20Premium%20Plus%20Package%20(LKR%2045,000/month).%20Can%20you%20provide%20more%20details%20and%20help%20me%20get%20started?" className="w-full bg-gradient-to-r from-primary-600 to-accent-600 hover:from-primary-700 hover:to-accent-700 text-white py-4 px-6 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl inline-flex items-center justify-center">
                   Contact us to Purchase
                 </a>
               </div>
