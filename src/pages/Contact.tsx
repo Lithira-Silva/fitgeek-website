@@ -499,13 +499,9 @@ const Contact = () => {
                           <span className="font-semibold text-gray-700">Group Classes</span>
                           <span className="text-gray-900 font-bold">6:00 AM - 10:00 PM</span>
                         </div>
-                        <div className="flex justify-between items-center py-3 border-b border-primary-200">
+                        <div className="flex justify-between items-center py-3">
                           <span className="font-semibold text-gray-700">Personal Training</span>
                           <span className="text-gray-900 font-bold">6:00 AM - 9:00 PM</span>
-                        </div>
-                        <div className="flex justify-between items-center py-3">
-                          <span className="font-semibold text-gray-700">Pool & Sauna</span>
-                          <span className="text-gray-900 font-bold">6:00 AM - 10:00 PM</span>
                         </div>
                       </div>
                     </div>
@@ -535,13 +531,9 @@ const Contact = () => {
                           <span className="font-semibold text-gray-700">Group Classes</span>
                           <span className="text-gray-900 font-bold">7:00 AM - 9:00 PM</span>
                         </div>
-                        <div className="flex justify-between items-center py-3 border-b border-accent-200">
+                        <div className="flex justify-between items-center py-3">
                           <span className="font-semibold text-gray-700">Personal Training</span>
                           <span className="text-gray-900 font-bold">7:00 AM - 8:00 PM</span>
-                        </div>
-                        <div className="flex justify-between items-center py-3">
-                          <span className="font-semibold text-gray-700">Pool & Sauna</span>
-                          <span className="text-gray-900 font-bold">7:00 AM - 9:00 PM</span>
                         </div>
                       </div>
                     </div>
