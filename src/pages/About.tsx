@@ -246,9 +246,8 @@ const About = () => {
             </div>
             
             <h2 className="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-6 leading-tight">
-              Leadership
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-accent-600 to-primary-600">
-                Team
+                Leader
               </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
